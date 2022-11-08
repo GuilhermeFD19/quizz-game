@@ -54,8 +54,7 @@ question_seven.addEventListener('click', function(event){
     growProgressBar("100%");
 })
 question_eight.addEventListener('click', function(event){
-    storeAnswer(5, event)
-    nextQuestion(9);
+    storeAnswer(8, event)
 })
 
 submit8.addEventListener('click', function(){
