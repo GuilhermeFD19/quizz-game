@@ -20,46 +20,30 @@ function storeAnswer(question_number, event){
 
 question_one.addEventListener('click', function(event){
     storeAnswer(1, event)
-    nextQuestion(2)
-    growProgressBar('20%')
+   
 })
 question_two.addEventListener('click', function(event){
     storeAnswer(2, event)
-    nextQuestion(3);
-    growProgressBar("30%");
+
 })
 question_three.addEventListener('click', function(event){
     storeAnswer(3, event)
-    nextQuestion(4);
-    growProgressBar("50%");
 })
 question_four.addEventListener('click', function(event){
     storeAnswer(4, event)
-    nextQuestion(5);
-    growProgressBar("65%");
+  
 })
 question_five.addEventListener('click', function(event){
     storeAnswer(5, event)
-    nextQuestion(6);
-    growProgressBar("80%");
+   
 })
 question_six.addEventListener('click', function(event){
     storeAnswer(6, event)
-    nextQuestion(7);
-    growProgressBar("90%");
+  
 })
 question_seven.addEventListener('click', function(event){
     storeAnswer(7, event)
-    nextQuestion(8);
-    growProgressBar("100%");
-})
-question_eight.addEventListener('click', function(event){
-    storeAnswer(8, event)
-})
-
-submit8.addEventListener('click', function(){
-    document.getElementById("printtotalscore").innerHTML = totalScore();
-    document.getElementById("printscoreinfo").innerHTML = getInfoBasedOnScore();
+    
 })
 
 function totalScore(){
@@ -70,10 +54,8 @@ function totalScore(){
     answers.question4+
     answers.question5+
     answers.question6+
-    answers.question7+
-    answers.question8;
-   
-    
+    answers.question7;
+      
     return total_score;
 }
 
@@ -109,10 +91,39 @@ function nextQuestion(question_number){
     el2.style.display = "none";
 }
 
+submit1.addEventListener('click', function(){
+    nextQuestion(2);
+    growProgressBar('20%');
+})
+submit2.addEventListener('click', function(){
+    nextQuestion(3);
+    growProgressBar('40%');
+})
+submit3.addEventListener('click', function(){
+    nextQuestion(4);
+    growProgressBar('60%');
+})
+submit4.addEventListener('click', function(){
+    nextQuestion(5);
+    growProgressBar('70%');
+})
+submit5.addEventListener('click', function(){
+    nextQuestion(6);
+    growProgressBar('85%')
+})
+submit6.addEventListener('click', function(){
+    nextQuestion(7);
+    growProgressBar('100%')
+})
+submit7.addEventListener('click', function(){
+    nextQuestion(8);
+})
 
 
-
-
+submit8.addEventListener('click', function(){
+    document.getElementById("printtotalscore").innerHTML = totalScore();
+    document.getElementById("printscoreinfo").innerHTML = getInfoBasedOnScore();
+})
 
 function growProgressBar(percentage_width){
     var bar = document.getElementById("progress_bar");
